@@ -1,22 +1,20 @@
-package com.iremkryt.cryptoapp.ui
+package com.iremkryt.cryptoapp.ui.home
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.iremkryt.cryptoapp.R
 import com.iremkryt.cryptoapp.base.BaseFragment
 import com.iremkryt.cryptoapp.databinding.FragmentHomeBinding
+import com.iremkryt.cryptoapp.utils.Constant.API_KEY
+import com.iremkryt.cryptoapp.utils.Constant.LIMIT
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
     FragmentHomeBinding::inflate
 ) {
     override val viewModel by viewModels<HomeViewModel>()
 
     override fun onCreateFinished() {
-
+        viewModel.getData(API_KEY, LIMIT)
     }
 
     override fun initializeListeners() {
