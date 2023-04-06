@@ -1,6 +1,7 @@
 package com.iremkryt.cryptoapp.di
 
-import androidx.viewbinding.BuildConfig
+
+import com.iremkryt.cryptoapp.BuildConfig
 import com.iremkryt.cryptoapp.network.ApiFactory
 import com.iremkryt.cryptoapp.utils.Constant.BASE_URL
 import dagger.Module
